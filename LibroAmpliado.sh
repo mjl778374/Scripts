@@ -8,4 +8,4 @@ else
   exit 2
 fi
 
-evince "/home/manuel/Documentos/Libro al Día/Libros Ampliados/${nombre_archivo}"
+evince "/home/manuel/Documentos/Libro al Día/LibrosAmpliados/${nombre_archivo}"
