@@ -3,6 +3,8 @@ if [ $# -eq 0 ]; then
   exit 1
 elif [ $1 == "1" ]; then
   nombre_archivo="Libro Ampliado_ Aprendiendo de los mejores, de Francisco Alcaide.pdf"
+elif [ $1 == "2" ]; then
+  nombre_archivo="Libro Ampliado_ Creatividad S.A., de Ed Catmull.pdf"
 else
   echo "El parámetro '$1' no corresponde a ningún libro ampliado."
   exit 2
