@@ -7,6 +7,8 @@ elif [ $1 == "2" ]; then
   nombre_archivo="Libro Ampliado_ Creatividad S.A., de Ed Catmull.pdf"
 elif [ $1 == "3" ]; then
   nombre_archivo="Storytelling salvaje, de Isra Bravo.pdf"
+elif [ $1 == "4" ]; then
+  nombre_archivo="De cero a uno, de Peter Thiel.pdf"
 else
   echo "El parámetro '$1' no corresponde a ningún libro ampliado."
   exit 2
