@@ -16,4 +16,6 @@ else
   exit 2
 fi
 
+echo "Abriendo el archivo ${nombre_archivo}"
+sleep 5
 evince "/home/manuel/Documentos/Libro al Día/LibrosAmpliados/${nombre_archivo}"
