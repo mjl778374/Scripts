@@ -13,6 +13,8 @@ elif [ $1 == "5" ]; then
   nombre_archivo="Libro ampliado_ 48 leyes del poder, de Robert Greene.pdf"
 elif [ $1 == "6" ]; then
   nombre_archivo="Libro Ampliado_ La psicología del dinero, por Morgan Housel.pdf"
+elif [ $1 == "7" ]; then
+  nombre_archivo="Libro Ampliado_ Mientras escribo, de Stephen King.pdf"
 else
   echo "El parámetro '$1' no corresponde a ningún libro ampliado."
   exit 2
