@@ -19,6 +19,8 @@ elif [ $1 == "8" ]; then
   nombre_archivo="Libro Ampliado_ Diario para estoicos, de Ryan Holiday.pdf"
 elif [ $1 == "9" ]; then
   nombre_archivo="Resumen Ampliado_ El almanaque, de Naval Ravikant.pdf"
+elif [ $1 == "10" ]; then
+  nombre_archivo="Resumen Ampliado_ Tus zonas erróneas, de Wayne Dyer.pdf"
 else
   echo "El parámetro '$1' no corresponde a ningún libro ampliado."
   exit 2
