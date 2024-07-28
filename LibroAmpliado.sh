@@ -27,6 +27,8 @@ elif [ $1 == "12" ]; then
   nombre_archivo="Resumen Ampliado_ Crea tu segundo cerebro, de Tiago Forte.pdf"
 elif [ $1 == "13" ]; then
   nombre_archivo="Resumen Ampliado_ Prisioneros de la geografía, de Tim Marshall.pdf"
+elif [ $1 == "14" ]; then
+  nombre_archivo="Resumen Ampliado_ Armas de titanes, de Tim Ferriss.pdf"
 else
   echo "El parámetro '$1' no corresponde a ningún libro ampliado."
   exit 2
