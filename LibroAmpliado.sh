@@ -29,6 +29,8 @@ elif [ $1 == "13" ]; then
   nombre_archivo="Resumen Ampliado_ Prisioneros de la geografía, de Tim Marshall.pdf"
 elif [ $1 == "14" ]; then
   nombre_archivo="Resumen Ampliado_ Armas de titanes, de Tim Ferriss.pdf"
+elif [ $1 == "15" ]; then
+  nombre_archivo="Resumen Ampliado_ Homo Deus, de Yuval Noah Harari.pdf"
 else
   echo "El parámetro '$1' no corresponde a ningún libro ampliado."
   exit 2
@@ -36,4 +38,4 @@ fi
 
 echo "Abriendo el archivo ${nombre_archivo}"
 sleep 5
-evince "/home/manuel/Documentos/Libro al Día/LibrosAmpliados/${nombre_archivo}"
+xdg-open "/home/manuel/Documentos/Libro al Día/LibrosAmpliados/${nombre_archivo}"
