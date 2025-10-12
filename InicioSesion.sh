@@ -1,8 +1,8 @@
-carpeta_scripts="$HOME/Scripts"
+CARPETA_SCRIPTS="$HOME/Scripts"
 
-if ! [[ "$PATH" =~ "$carpeta_scripts:" ]]
+if ! [[ "$PATH" =~ "$CARPETA_SCRIPTS:" ]]
 then
-    PATH="$carpeta_scripts:$PATH"
+    PATH="$CARPETA_SCRIPTS:$PATH"
 fi
 
 export PATH
@@ -17,6 +17,6 @@ function IntentarIniciarApp {
 
 alias iniciarportforwarding="port-forwarding.sh"
 
-IntentarIniciarApp "/opt/vivaldi/vivaldi-bin" "Vivaldi" "Vivaldi.sh"
+#IntentarIniciarApp "/opt/vivaldi/vivaldi-bin" "Vivaldi" "Vivaldi.sh"
 IntentarIniciarApp "bijiben" "Notas" "bijiben"
-IntentarIniciarApp "anki" "Anki" "anki"
+#IntentarIniciarApp "anki" "Anki" "anki"
