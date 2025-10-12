@@ -1,5 +1,5 @@
 if ! [ $# -eq 1 ]; then
-  echo "Emplee $0 NUM_LIBRO"
+  echo "Emplee '$0' NUM_LIBRO"
   exit 1
 else
   encontrado=false

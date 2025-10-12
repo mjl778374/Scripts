@@ -11,7 +11,7 @@ function IntentarIniciarApp {
     if ! [[ -n $(ps aux | tr -s ' ' | cut -d ' ' -f11 | grep --line-regexp $1) ]]
     then
         echo "Iniciando $2..."
-        "$3" &
+        $3 &
     fi
 } # function IntentarIniciarApp {
 

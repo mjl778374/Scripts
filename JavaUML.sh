@@ -1,5 +1,5 @@
 if [ $# -gt 1 ]; then
-  echo "Emplee $0 USUARIO"
+  echo "Emplee '$0' USUARIO"
   exit 1
 elif [ $# -eq 1 ]; then
   usuario=$1

@@ -5,7 +5,7 @@ NINGUNO=0
 TIPO_ARCHIVO=LIBRO_AMPLIADO
 
 if ! [ $# -eq 1 ]; then
-  echo "Emplee $0 NUM_LIBRO"
+  echo "Emplee '$0' NUM_LIBRO"
   exit 1
 elif [ $1 == "1" ]; then
   nombre_archivo="Libro Ampliado_ Aprendiendo de los mejores, de Francisco Alcaide.pdf"
