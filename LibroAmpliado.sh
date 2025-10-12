@@ -1,3 +1,9 @@
+LIBRO_AMPLIADO=1
+INFOGRAFIA=2
+NINGUNO=3
+
+TIPO_ARCHIVO=LIBRO_AMPLIADO
+
 if [ $# -eq 0 ]; then
   echo "Debe indicar un parámetro."
   exit 1
@@ -33,13 +39,33 @@ elif [ $1 == "15" ]; then
   nombre_archivo="Resumen Ampliado_ Homo Deus, de Yuval Noah Harari.pdf"
 elif [ $1 == "16" ]; then
   nombre_archivo="Resumen Ampliado_ Decídete, de Dan y Chip Heath.pdf"
-elif [ $1 == "17" ]; then
-  nombre_archivo="Cómo ganar amigos e influir en las personas.pdf"
 else
-  echo "El parámetro $1 no corresponde a ningún libro ampliado."
+  TIPO_ARCHIVO=NINGUNO
+fi
+
+if [ $TIPO_ARCHIVO == NINGUNO ]; then
+  TIPO_ARCHIVO=INFOGRAFIA
+fi
+
+if [ $TIPO_ARCHIVO == INFOGRAFIA ]; then
+  if [ $1 == "17" ]; then
+    nombre_archivo="Cómo ganar amigos e influir en las personas.pdf"
+  else
+    TIPO_ARCHIVO=NINGUNO
+  fi
+fi
+
+if [ $TIPO_ARCHIVO == NINGUNO ]; then
+  echo "El parámetro $1 no corresponde a ningún libro ampliado ni ninguna infografía."
   exit 2
 fi
 
-echo "Abriendo el archivo ${nombre_archivo}"
+MENSAJE_TIPO_ARCHIVO="el libro ampliado"
+
+if [ $TIPO_ARCHIVO == INFOGRAFIA ]; then
+  MENSAJE_TIPO_ARCHIVO="la infografía"
+fi
+
+echo "Abriendo $MENSAJE_TIPO_ARCHIVO ${nombre_archivo}"
 sleep 5
 xdg-open "/home/manuel/Documentos/Libro al Día/LibrosAmpliados/${nombre_archivo}"
