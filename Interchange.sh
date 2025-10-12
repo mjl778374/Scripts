@@ -18,4 +18,4 @@ if [ $encontrado != true ]; then
   exit 2
 fi
 
-evince /home/manuel/Documentos/Interchange/Interchange_4th_$1_SB.pdf
+xdg-open /home/manuel/Documentos/Interchange/Interchange_4th_$1_SB.pdf
