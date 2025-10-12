@@ -36,7 +36,7 @@ elif [ $1 == "16" ]; then
 elif [ $1 == "17" ]; then
   nombre_archivo="Cómo ganar amigos e influir en las personas.pdf"
 else
-  echo "El parámetro '$1' no corresponde a ningún libro ampliado."
+  echo "El parámetro $1 no corresponde a ningún libro ampliado."
   exit 2
 fi
 
