@@ -56,7 +56,7 @@ if [ $TIPO_ARCHIVO == INFOGRAFIA ]; then
 fi
 
 if [ $TIPO_ARCHIVO == NINGUNO ]; then
-  echo "El parámetro $1 no corresponde a ningún libro ampliado ni ninguna infografía"
+  echo "El parámetro '$1' no corresponde a ningún libro ampliado ni a ninguna infografía"
   exit 2
 fi
 
@@ -66,6 +66,6 @@ if [ $TIPO_ARCHIVO == INFOGRAFIA ]; then
   MENSAJE_TIPO_ARCHIVO="la infografía"
 fi
 
-echo "Abriendo $MENSAJE_TIPO_ARCHIVO ${nombre_archivo}"
+echo "Abriendo $MENSAJE_TIPO_ARCHIVO '${nombre_archivo}'"
 sleep 5
 xdg-open "/home/manuel/Documentos/Libro al Día/LibrosAmpliados/${nombre_archivo}"
