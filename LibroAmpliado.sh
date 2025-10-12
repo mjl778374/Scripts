@@ -4,8 +4,8 @@ NINGUNO=0
 
 TIPO_ARCHIVO=LIBRO_AMPLIADO
 
-if [ $# -eq 0 ]; then
-  echo "Debe indicar un parámetro."
+if ! [ $# -eq 1 ]; then
+  echo "Emplee $0 NUM_LIBRO"
   exit 1
 elif [ $1 == "1" ]; then
   nombre_archivo="Libro Ampliado_ Aprendiendo de los mejores, de Francisco Alcaide.pdf"
@@ -56,7 +56,7 @@ if [ $TIPO_ARCHIVO == INFOGRAFIA ]; then
 fi
 
 if [ $TIPO_ARCHIVO == NINGUNO ]; then
-  echo "El parámetro $1 no corresponde a ningún libro ampliado ni ninguna infografía."
+  echo "El parámetro $1 no corresponde a ningún libro ampliado ni ninguna infografía"
   exit 2
 fi
 
