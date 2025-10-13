@@ -11,12 +11,17 @@ function IntentarIniciarApp {
     if ! [[ -n $(ps aux | tr -s ' ' | cut -d ' ' -f11 | grep --line-regexp $1) ]]
     then
         echo "Iniciando $2..."
-        $3 &
+        
+        if [ $4 == "1" ]; then
+            "$3" &
+        else
+            "$3"
+        fi
     fi
 } # function IntentarIniciarApp {
 
 alias iniciarportforwarding="port-forwarding.sh"
 
 #IntentarIniciarApp "/opt/vivaldi/vivaldi-bin" "Vivaldi" "Vivaldi.sh"
-IntentarIniciarApp "bijiben" "Notas" "bijiben"
-#IntentarIniciarApp "anki" "Anki" "anki"
+IntentarIniciarApp "bijiben" "Notas" "bijiben" 1
+#IntentarIniciarApp "anki" "Anki" "anki" 0
