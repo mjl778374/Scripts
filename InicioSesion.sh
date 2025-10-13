@@ -20,8 +20,16 @@ function IntentarIniciarApp {
     fi
 } # function IntentarIniciarApp {
 
-alias iniciarportforwarding="port-forwarding.sh"
+function IntentarIniciarAppVivaldi {
+    IntentarIniciarApp "/opt/vivaldi/vivaldi-bin" "Vivaldi" "Vivaldi.sh" $1
+} # function IntentarIniciarAppVivaldi {
 
-#IntentarIniciarApp "/opt/vivaldi/vivaldi-bin" "Vivaldi" "Vivaldi.sh"
-IntentarIniciarApp "bijiben" "Notas" "bijiben" 1
-#IntentarIniciarApp "anki" "Anki" "anki" 0
+function IntentarIniciarAppNotas {
+    IntentarIniciarApp "bijiben" "Notas" "bijiben" $1
+} # function IntentarIniciarAppNotas {
+
+function IntentarIniciarAppAnki {
+    IntentarIniciarApp "anki" "Anki" "anki" $1
+} # function IntentarIniciarAppAnki {
+
+alias iniciarportforwarding="port-forwarding.sh"
