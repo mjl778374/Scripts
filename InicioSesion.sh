@@ -11,12 +11,14 @@ function IntentarIniciarApp {
     if ! [[ -n $(ps aux | tr -s ' ' | cut -d ' ' -f11 | grep --line-regexp $1) ]]
     then
         echo "Iniciando $2..."
+   
+        comando=$3
         
         if [ $4 == "1" ]; then
-            "$3" &
-        else
-            "$3"
+            comando="$comando" &
         fi
+        
+        "$comando"
     fi
 } # function IntentarIniciarApp {
 
