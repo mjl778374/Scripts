@@ -16,4 +16,4 @@ if ! [ $? -eq 0 ]; then
   exit 2
 fi
 
-xdg-open "${ruta_archivo}"
+sudo xdg-open "${ruta_archivo}"
