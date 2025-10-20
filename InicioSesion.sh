@@ -8,7 +8,7 @@ fi
 export PATH
 
 function IntentarIniciarApp {
-    if ! [[ -n $(ps aux | tr -s ' ' | cut -d ' ' -f11 | grep --line-regexp $1) ]]
+    if [[ -z $(ps aux | tr -s ' ' | cut -d ' ' -f11 | grep --line-regexp $1) ]]
     then
         echo "Iniciando $2..."
    
