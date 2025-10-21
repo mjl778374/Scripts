@@ -47,9 +47,12 @@ if [ $TIPO_ARCHIVO == NINGUNO ]; then
   TIPO_ARCHIVO=INFOGRAFIA
 fi
 
+guia_interactiva=""
+
 if [ $TIPO_ARCHIVO == INFOGRAFIA ]; then
   if [ $1 == "17" ]; then
     nombre_archivo="Cómo ganar amigos e influir en las personas.pdf"
+    guia_interactiva="https://libroaldiapro.typeform.com/to/RjLXbVZb"
   else
     TIPO_ARCHIVO=NINGUNO
   fi
@@ -67,5 +70,14 @@ if [ $TIPO_ARCHIVO == INFOGRAFIA ]; then
 fi
 
 echo "Abriendo $MENSAJE_TIPO_ARCHIVO '${nombre_archivo}'"
+
+if [[ -n $guia_interactiva ]] then
+  echo "Abriendo la guía interactiva '${guia_interactiva}'"
+fi
+
 sleep 5
 xdg-open "/home/manuel/Documentos/Libro al Día/LibrosAmpliados/${nombre_archivo}"
+
+if [[ -n $guia_interactiva ]] then
+  xdg-open "${guia_interactiva}"
+fi
