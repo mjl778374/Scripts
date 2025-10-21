@@ -1,11 +1,9 @@
-if [ $# -gt 1 ]; then
-  echo "Emplee '$0' [USUARIO]"
+if ! [[ $# -eq 0 ]]; then
+  echo "Emplee '$0'"
   exit 1
-elif [ $# -eq 1 ]; then
-  usuario=$1
-else
-  usuario=$USER
 fi
+
+usuario=$USER
 
 ruta_archivo="/run/media/$usuario/Java y UML/inicio.htm"
 
@@ -16,4 +14,5 @@ if ! [ $? -eq 0 ]; then
   exit 2
 fi
 
+echo "Abriendo el archivo '${ruta_archivo}'"
 xdg-open "${ruta_archivo}"

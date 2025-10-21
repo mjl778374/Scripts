@@ -75,7 +75,6 @@ if [[ -n $guia_interactiva ]] then
   echo "Abriendo la guía interactiva '${guia_interactiva}'"
 fi
 
-sleep 5
 xdg-open "/home/manuel/Documentos/Libro al Día/LibrosAmpliados/${nombre_archivo}"
 
 if [[ -n $guia_interactiva ]] then
